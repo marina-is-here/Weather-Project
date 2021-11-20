@@ -1,0 +1,21 @@
+h1 {
+}
+
+h3 {
+  padding: 40px 0 0 0;
+}
+.col-2.high-low {
+  font-size: 15px;
+  line-height: 40px;
+}
+ {
+  display: inline;
+}
+
+.btn.btn-primary {
+  display: inline;
+  color: #ff7143;
+}
+.meaning {
+  font-weight: bold;
+}
