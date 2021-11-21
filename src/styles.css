@@ -19,3 +19,7 @@ h3 {
 .meaning {
   font-weight: bold;
 }
+
+.advice {
+  font-style: italic;
+}
