@@ -23,3 +23,9 @@ h3 {
 .advice {
   font-style: italic;
 }
+
+.text-rotation {
+  transform: rotate(-20deg);
+  -webkit-transform: function;
+  -moz-transform: function;
+}

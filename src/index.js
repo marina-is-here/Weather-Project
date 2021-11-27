@@ -109,7 +109,7 @@ degreesCelsius.addEventListener("click", convertToCelsius);
 // Search a default city on reload
 searchForCity("Melbourne");
 
-// get random advice
+// get random advice button
 function displayAdvice(callback) {
   console.log(callback);
   let newAdvice = document.querySelector("#advice");
@@ -124,3 +124,10 @@ function handleAdvice(event) {
 
 let randomAdvice = document.querySelector("#random-button");
 randomAdvice.addEventListener("click", handleAdvice);
+
+// show advice when resfresh
+function defaultAdvice() {
+  let Url = "https://api.adviceslip.com/advice";
+  axios.get(Url).then(displayAdvice);
+}
+defaultAdvice();
