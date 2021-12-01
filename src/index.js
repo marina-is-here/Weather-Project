@@ -18,7 +18,12 @@ function formatDate(date) {
     "Saturday",
   ];
   let day = days[date.getDay()];
-  return `Today is ${day} ${hour}:${minute}`;
+
+  let months = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"];
+  let month = months[date.getMonth()];
+  let dateToday = date.getDate();
+  let year = date.getFullYear();
+  return `${day}, ${dateToday}/${month}/${year} ${hour}:${minute}`;
 }
 
 let today = new Date();

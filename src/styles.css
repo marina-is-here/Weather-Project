@@ -24,6 +24,9 @@ h3 {
   font-style: italic;
 }
 
+.fahrenheit {
+  display: inline;
+}
 //.text-rotation {
   transform: rotate(-20deg);
   -webkit-transform: function;
