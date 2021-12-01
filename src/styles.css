@@ -24,7 +24,7 @@ h3 {
   font-style: italic;
 }
 
-.text-rotation {
+//.text-rotation {
   transform: rotate(-20deg);
   -webkit-transform: function;
   -moz-transform: function;

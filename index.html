@@ -16,47 +16,41 @@
   </head>
   <body class="text-rotation">
     <div class="container">
-      <small>
-        <div class="row">
-          <div class="col-3" id="date">Today is ...</div>
-          <div class="col-1 celsius">
-            <a href="#" class="celsius" id="celsius">°C | </a>
-            <a href="#" class="fahrenheit" id="fahrenheit">°F </a>
-          </div>
-
-          <div class="col-3">
-            <form id="search-form">
-              <div class="form-group">
-                <input
-                  id="search-city-input"
-                  type="search"
-                  class="form-control"
-                  placeholder="Enter your city"
-                  autocomplete="off"
-                  autofocus="on"
-                />
-              </div>
-            </form>
-          </div>
-
-          <div class="col-1">
-            <input
-              type="submit"
-              class="btn btn-primary shadow"
-              value="search"
-            />
-            <div class="col-1">
-              <button
-                id="search-current-location"
-                type="button"
-                class="btn btn-outline-primary"
-              >
-                Current location
-              </button>
-            </div>
-          </div>
+      <div class="row">
+        <div class="col-3" id="date">Today is ...</div>
+        <div class="col-1 celsius">
+          <a href="#" class="celsius" id="celsius">°C | </a>
+          <a href="#" class="fahrenheit" id="fahrenheit">°F </a>
         </div>
-      </small>
+
+        <div class="col-3">
+          <form id="search-form">
+            <div class="form-group">
+              <input
+                id="search-city-input"
+                type="search"
+                class="form-control"
+                placeholder="Enter your city"
+                autocomplete="off"
+                autofocus="on"
+              />
+            </div>
+          </form>
+        </div>
+
+        <div class="col-2">
+          <input type="submit" class="btn btn-primary shadow" value="search" />
+        </div>
+        <div class="col-2">
+          <button
+            id="search-current-location"
+            type="button"
+            class="btn btn-outline-primary w-100"
+          >
+            Current location
+          </button>
+        </div>
+      </div>
       <h1 id="city">Melbourne</h1>
       <h2>
         <div class="row">
