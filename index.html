@@ -14,88 +14,80 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>Weather App</title>
   </head>
-  <body class="text-rotation">
+  <body>
     <div class="container">
-      <div class="col position-absolute top-0 end-0 p-3">
-        <div class="row">
-          <div class="col" id="date"></div>
-          <div class="col">
-            <form id="search-form">
-              <div class="form-group">
-                <input
-                  id="search-city-input"
-                  type="search"
-                  class="form-control"
-                  placeholder="Enter your city"
-                  autocomplete="off"
-                  autofocus="on"
-                />
-              </div>
-            </form>
-          </div>
+      <div class="row">
+        <div class="col-3" id="date">Today is ...</div>
+        <div class="col-1 celsius">
+          <a href="#" class="celsius-link active" id="celsius-link">°C</a> | 
+          <a href="#" class="fahrenheit-link" id="fahrenheit-link">°F</a>
+        </div>
 
-          <div class="col">
-            <input
-              type="submit"
-              class="btn btn-primary shadow"
-              value="search"
-            />
-          </div>
-          <div class="col">
+        <div class="col-3">
+          <form id="search-form">
+            <div class="form-group">
+              <input
+                id="search-city-input"
+                type="search"
+                class="form-control"
+                placeholder="Enter your city"
+                autocomplete="off"
+                autofocus="on"
+              />
+            </div>
+          </form>
+        </div>
+
+        <div class="col-1">
+          <input type="submit" class="btn btn-primary shadow" value="search" />
+          <div class="col-1">
             <button
               id="search-current-location"
               type="button"
-              class="btn btn-outline-primary w-100"
+              class="btn btn-outline-primary"
             >
               Current location
             </button>
           </div>
         </div>
       </div>
+
       <div class="row">
-        <div class="col-3">
-          <h1 id="city">Melbourne</h1>
+        <div class="col-2">
+          <h1 id="city"></h1>
+        </div>
+        <div class="col-10">
+          <img
+            src= ""
+            alt= "Clear"
+            id="icon"
+            class="float-right"
+            />
         </div>
       </div>
+
       <div class="row">
-        <div class="col-3">
+        <div class="col-2">
           <h2>
-            <span id="degrees"></span>
+           <span id="degrees"></span>
+          <span class="degrees-symbol">°</span>
+        </div>
+        <div class="col-2 high-low">
+        ↓<span id="min"></span> ↑<span id="max"></span>
           </h2>
+          </div>
         </div>
-        <div class="col-6 celsius">
-          <a href="#" class="celsius" id="celsius">°C | </a>
-          <a href="#" class="fahrenheit" id="fahrenheit">°F </a>
-        </div>
-
-        <div class="col-6 high-low">
-          ↓<span id="min"></span> ↑<span id="max"></span>
-        </div>
-      </div>
-
+      
       <div class="row">
-        <div class="col-6" id="description"></div>
-      </div>
-
-      <div class="row">
-        <div class="col-6">
+        <div class="col-2" id="description"></div>
+        <div class="col-2">
           Wind:
-          <span id="wind"> </span>
+          <span id="wind"></span>
           km/h
         </div>
+        <div class="col-2">Humidity: <span id="humidity"></span>%</div>
       </div>
-
-      <div class="row">
-        <div class="col-6">
-          Humidity:
-          <span id="humidity"> </span>%
-        </div>
-      </div>
-
-      <div class="row">
-        <p></p>
-      </div>
-
+      <div class="row"><p></p></div>
       <div class="row">
         <div class="col-12">
           Advice of the day:
@@ -160,7 +152,7 @@
           <div class="col-12 text-center">
             <a
               href="https://festive-goldberg-b863f1.netlify.app/"
-              target="blank"
+              target="blank" class= "link"
               >Open-source code </a
             >by Marina Taylor
           </div>

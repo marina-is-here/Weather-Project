@@ -8,22 +8,15 @@ function formatDate(date) {
   if (minute < 10) {
     minute = `0${minute}`;
   }
-  let days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
+  let days = ["Sun", "Mon", "Tues", "Wed", "Thur", "Frid", "Sat"];
   let day = days[date.getDay()];
 
   let months = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"];
   let month = months[date.getMonth()];
   let dateToday = date.getDate();
   let year = date.getFullYear();
-  return `${day}, ${dateToday}/${month}/${year} ${hour}:${minute}`;
+  year = year.toString().substr(-2);
+  return `${day} ${dateToday}/${month}/${year} ${hour}:${minute}`;
 }
 
 let today = new Date();
@@ -44,11 +37,18 @@ function displayWeather(response) {
   let currentHumidity = document.querySelector("#humidity");
   currentHumidity.innerHTML = response.data.main.humidity;
   let currentDescription = document.querySelector("#description");
-  currentDescription.innerHTML = response.data.weather[0].main;
+  currentDescription.innerHTML = response.data.weather[0].description;
   let currentMax = document.querySelector("#max");
   currentMax.innerHTML = Math.round(response.data.main.temp_max);
   let currentMin = document.querySelector("#min");
   currentMin.innerHTML = Math.round(response.data.main.temp_min);
+  let currentIcon = document.querySelector("#icon");
+  currentIcon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  currentIcon.setAttribute("alt", response.data.weather[0].description);
+  celsiusTemperature = response.data.main.temp;
 }
 
 // Using the search input as the city input for weather
@@ -87,29 +87,31 @@ function getCurrentPosition(event) {
 let locationSearch = document.querySelector("#search-current-location");
 locationSearch.addEventListener("click", getCurrentPosition);
 
-// Chaning celsius to fahrenheit when clicking °F
+// Chaning temperature btw. C and F
 function convertToFahrenheit(event) {
   event.preventDefault();
-  let newTempElement = document.querySelector("#degrees");
-  let newTemp = newTempElement.innerHTML;
-  newTemp = Number(newTemp);
-  newTempElement.innerHTML = Math.round(newTemp * 1.8 + 32);
+  let temperatureElement = document.querySelector("#degrees");
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
 
-let degreesFahrenheit = document.querySelector("#fahrenheit");
-degreesFahrenheit.addEventListener("click", convertToFahrenheit);
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", convertToFahrenheit);
 
-// Chaning fahrenheit to celsius  when clicking °C ---- NOT FINISHED
 function convertToCelsius(event) {
   event.preventDefault();
-  let newTempElement = document.querySelector("#degrees");
-  let newTemp = newTempElement.innerHTML;
-  newTemp = Number(newTemp);
-  newTempElement.innerHTML = Math.round(((newTemp - 32) * 5) / 9);
+  let temperatureElement = document.querySelector("#degrees");
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 
-let degreesCelsius = document.querySelector("#celsius");
-degreesCelsius.addEventListener("click", convertToCelsius);
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", convertToCelsius);
+
+let celsiusTemperature = null;
 
 // Search a default city on reload
 searchForCity("Melbourne");
