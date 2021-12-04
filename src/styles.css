@@ -71,3 +71,7 @@ h3 {
 .link {
   text-decoration: none;
 }
+
+.icon {
+  width: 100px;
+}

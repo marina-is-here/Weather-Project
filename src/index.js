@@ -45,7 +45,7 @@ function displayWeather(response) {
   let currentIcon = document.querySelector("#icon");
   currentIcon.setAttribute(
     "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    `images/${response.data.weather[0].icon}.png`
   );
   currentIcon.setAttribute("alt", response.data.weather[0].description);
   celsiusTemperature = response.data.main.temp;
