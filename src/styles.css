@@ -29,12 +29,11 @@ h3 {
 
 .col.left-inner-background {
   padding: 0px;
-  background: #BE1E3C; 
-  background: hsla(350,50%,50%,0.3);   
-  transition: background 1s;
+  background: hsla(349,50%,50%,0.3);   
+  transition: background 0.7s;
 }
 .col.left-inner-background:hover {
-  background: hsla(350,50%,50%,0.9)
+  background: hsla(349,50%,50%,0.7)
 }
 
 .col.right-inner-background {
