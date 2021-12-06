@@ -7,7 +7,13 @@ h3 {
   padding: 40px 0 0 0;
 }
 
-
+.background-holder {
+  overflow: hidden;
+  margin: 0 auto;
+  position: absolute;
+  pointer-events: none;
+  z-index: -1;
+}
 .col-md-6.left-background {
   padding: 0;
   background-repeat: no-repeat;
@@ -21,17 +27,22 @@ h3 {
   background:#4F5B7C;
 }
 
-.container {
-  padding: 10px;
+.col.left-inner-background {
+  padding: 0px;
+  background: #BE1E3C; 
+  background: hsla(350,50%,50%,0.3);   
+  transition: background 1s;
+}
+.col.left-inner-background:hover {
+  background: hsla(350,50%,50%,0.9)
+}
+
+.col.right-inner-background {
+  padding: 0;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left;
-  background-image: url(../images/inner.jpg);
-}
-
-.container.left-inner-background {
-  background-color: chartreuse;
-  border: coral;
+  background-image: url(../images/right.jpg);
 }
 
 .weather-app-wrapper {
@@ -67,13 +78,7 @@ h3 {
   -moz-transform: function;
 }
 
-.background-holder {
-  overflow: hidden;
-  margin: 0 auto;
-  position: absolute;
-  pointer-events: none;
-  z-index: -1;
-}
+
 
 
 
