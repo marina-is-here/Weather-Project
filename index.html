@@ -10,6 +10,12 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="src/styles.css" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>Weather App</title>
@@ -22,12 +28,12 @@
       </div>
     </div>
     <div class="weather-app-wrapper">
-      <div class="container">
+      <div class="container left-right">
         <div class="row">
           <div class="col left-inner-background">
             <div class="row">
               <div class="col">
-                <h1 id="city">Melbourne</h1>
+                <h1 id="city"></h1>
               </div>
             </div>
 
@@ -43,7 +49,8 @@
                 <a href="#" class="fahrenheit-link" id="fahrenheit-link">°F</a>
               </div>
               <div class="col-2 high-low">
-                ↓<span id="min"></span> ↑<span id="max"></span>
+                <span class="current-temperature-min" id="min"></span>° |
+                <span id="max"></span>°
               </div>
             </div>
 
@@ -108,68 +115,12 @@
               </div>
             </div>
 
-            <div class="forecast">
-              <div class="row">
-                <div class="col forecast-day">Sat</div>
-                <div class="col forecast-temperature">
-                  <span class="forecast-temperature-min">10°</span>
-                  /
-                  <span class="forecast-temperature-max">21°</span>
-                </div>
-                <div class="col">
-                  <img src="images/rain.png" alt="..." />
-                </div>
-              </div>
-            </div>
-
-            <div class="forecast">
-              <div class="row">
-                <div class="col forecast-day">Sun</div>
-                <div class="col forecast-temperature">
-                  <span class="forecast-temperature-min">10°</span>
-                  /
-                  <span class="forecast-temperature-max">21°</span>
-                </div>
-                <div class="col">
-                  <img src="images/rain.png" alt="..." />
-                </div>
-              </div>
-            </div>
-
-            <div class="forecast">
-              <div class="row">
-                <div class="col forecast-day">Mon</div>
-                <div class="col forecast-temperature">
-                  <span class="forecast-temperature-min">10°</span>
-                  /
-                  <span class="forecast-temperature-max">21°</span>
-                </div>
-                <div class="col">
-                  <img src="images/rain.png" alt="..." />
-                </div>
-              </div>
-            </div>
-
-            <div class="forecast">
-              <div class="row">
-                <div class="col forecast-day">Tue</div>
-                <div class="col forecast-temperature">
-                  <span class="forecast-temperature-min">10°</span>
-                  /
-                  <span class="forecast-temperature-max">21°</span>
-                </div>
-                <div class="col">
-                  <img src="images/rain.png" alt="..." />
-                </div>
-              </div>
-            </div>
-
-            <div class="forecast">
+            <div class="forecast" id="forecast">
               <div class="row">
                 <div class="col forecast-day">Wed</div>
                 <div class="col forecast-temperature">
                   <span class="forecast-temperature-min">10°</span>
-                  /
+                  |
                   <span class="forecast-temperature-max">21°</span>
                 </div>
                 <div class="col">
@@ -180,7 +131,7 @@
 
             <div class="row">
               <div class="col">
-                Advice of the day:
+                In need of advice?
                 <span id="advice"></span>
               </div>
             </div>
@@ -194,14 +145,14 @@
           </div>
         </div>
       </div>
-      <div class="fixed-bottom gitHub">
-        <a
-          href="https://festive-goldberg-b863f1.netlify.app/"
-          target="blank"
-          class="link"
-          >Open-source code </a
-        >by Marina Taylor
-      </div>
+    </div>
+    <div class="position-absolute bottom-0 start-50 translate-middle">
+      <a
+        href="https://festive-goldberg-b863f1.netlify.app/"
+        target="blank"
+        class="link"
+        >Open-source code </a
+      >by Marina Taylor
     </div>
     <script src="src/index.js"></script>
   </body>

@@ -1,6 +1,12 @@
 
 
 h1 {
+  font-family: 'Abril Fatface', cursive;
+  font-size: 80px;
+  transform: rotate(-11deg);
+  position: relative;
+  top: -40px;
+  left: -32px;
 }
 
 h3 {
@@ -24,7 +30,7 @@ h3 {
 
 .col-md-6.right-background {
   padding: 0;
-  background:#4F5B7C;
+  background:#cdd5ee;
 }
 
 .col.left-inner-background {
@@ -32,8 +38,8 @@ h3 {
   background: hsla(349,50%,50%,0.3);   
   transition: background 0.7s;
 }
-.col.left-inner-background:hover {
-  background: hsla(349,50%,50%,0.7)
+.container.left-right:hover {
+  background: hsla(349,50%,50%,0.6)
 }
 
 .col.right-inner-background {
@@ -110,6 +116,11 @@ h3 {
 
 .icon {
   width: 100px;
+}
+
+.forecast-temperature-min, 
+.current-temperature-min {
+  opacity: 0.7;
 }
 
 .gitHub {
