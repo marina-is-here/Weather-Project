@@ -6,6 +6,41 @@ h1 {
 h3 {
   padding: 40px 0 0 0;
 }
+
+
+.col-md-6.left-background {
+  padding: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left;
+  background-image: url(../images/right.jpg);
+}
+
+.col-md-6.right-background {
+  padding: 0;
+  background:#4F5B7C;
+}
+
+.container {
+  padding: 10px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left;
+  background-image: url(../images/inner.jpg);
+}
+
+.container.left-inner-background {
+  background-color: chartreuse;
+  border: coral;
+}
+
+.weather-app-wrapper {
+  padding: 150px 40px 40px;
+}
+
+.gitHub {
+  padding: 30px;
+}
 .col-2.high-low {
   font-size: 15px;
   line-height: 40px;
@@ -40,10 +75,7 @@ h3 {
   z-index: -1;
 }
 
-.container {
-  border-left: 2px solid red;
-  border-right: 2px solid red;
-}
+
 
 .img {
   display: inline;
@@ -74,4 +106,8 @@ h3 {
 
 .icon {
   width: 100px;
+}
+
+.gitHub {
+  text-align: center;
 }

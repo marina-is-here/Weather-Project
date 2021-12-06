@@ -15,148 +15,143 @@
     <title>Weather App</title>
   </head>
   <body>
-    <div class="container">
-      <div class="row">
-        <div class="col-3" id="date">Today is ...</div>
-        <div class="col-1 celsius">
-          <a href="#" class="celsius-link active" id="celsius-link">°C</a> | 
-          <a href="#" class="fahrenheit-link" id="fahrenheit-link">°F</a>
-        </div>
-
-        <div class="col-3">
-          <form id="search-form">
-            <div class="form-group">
-              <input
-                id="search-city-input"
-                type="search"
-                class="form-control"
-                placeholder="Enter your city"
-                autocomplete="off"
-                autofocus="on"
-              />
-            </div>
-          </form>
-        </div>
-
-        <div class="col-1">
-          <input type="submit" class="btn btn-primary shadow" value="search" />
-          <div class="col-1">
-            <button
-              id="search-current-location"
-              type="button"
-              class="btn btn-outline-primary"
-            >
-              Current location
-            </button>
-          </div>
-        </div>
+    <div class="container-fluid h-100 background-holder">
+      <div class="row h-100">
+        <div class="col-md-6 left-background"></div>
+        <div class="col-md-6 right-background"></div>
       </div>
-
-      <div class="row">
-        <div class="col-2">
-          <h1 id="city"></h1>
-        </div>
-        <div class="col-10">
-          <img
-            src= ""
-            alt= "Clear"
-            id="icon"
-            class="icon"
-            />
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-2">
-          <h2>
-           <span id="degrees"></span>
-          <span class="degrees-symbol">°</span>
-        </div>
-        <div class="col-2 high-low">
-        ↓<span id="min"></span> ↑<span id="max"></span>
-          </h2>
-          </div>
-        </div>
-      
-      <div class="row">
-        <div class="col-2" id="description"></div>
-        <div class="col-2">
-          Wind:
-          <span id="wind"></span>
-          km/h
-        </div>
-        <div class="col-2">Humidity: <span id="humidity"></span>%</div>
-      </div>
-      <div class="row"><p></p></div>
-      <div class="row">
-        <div class="col-12">
-          Advice of the day:
-          <span id="advice"></span>
-        </div>
-      </div>
-      <button id="random-button" type="button" class="btn btn-outline-primary">
-        New Advice
-      </button>
-
-      <div class="row">
-        <div class="col-2">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Mon</h5>
-              <p class="card-text">↓10/↑21</p>
-            </div>
-            <img src="images/rain.png" class="card-img-bottom" alt="..." />
-          </div>
-        </div>
-
-        <div class="col-2">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Tue</h5>
-              <p class="card-text">↓13/↑24</p>
-            </div>
-            <img src="images/cloud.png" class="card-img-bottom" alt="..." />
-          </div>
-        </div>
-
-        <div class="col-2">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Wed</h5>
-              <p class="card-text">↓11/↑27</p>
-            </div>
-            <img src="images/rain.png" class="card-img-bottom" alt="..." />
-          </div>
-        </div>
-
-        <div class="col-2">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Thu</h5>
-              <p class="card-text">↓16/↑29</p>
-            </div>
-            <img src="images/rain.png" class="card-img-bottom" alt="..." />
-          </div>
-        </div>
-
-        <div class="col-2">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Fri</h5>
-              <p class="card-text">↓12/↑25</p>
-            </div>
-            <img src="images/cloud.png" class="card-img-bottom" alt="..." />
-          </div>
-        </div>
+    </div>
+    <div class="weather-app-wrapper">
+      <div class="container left-inner-background">
         <div class="row">
-          <div class="col-12 text-center">
-            <a
-              href="https://festive-goldberg-b863f1.netlify.app/"
-              target="blank" class= "link"
-              >Open-source code </a
-            >by Marina Taylor
+          <div class="col">
+            <div class="row">
+              <div class="col">
+                <h1 id="city">Melbourne</h1>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-1">
+                <h2>
+                  <span id="degrees"></span>
+                </h2>
+              </div>
+              <div class="col-2 celsius">
+                <a href="#" class="celsius-link active" id="celsius-link">°C</a>
+                |
+                <a href="#" class="fahrenheit-link" id="fahrenheit-link">°F</a>
+              </div>
+              <div class="col-2 high-low">
+                ↓<span id="min"></span> ↑<span id="max"></span>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col" id="description"></div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                Wind:
+                <span id="wind"> </span>
+                km/h
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                Humidity:
+                <span id="humidity"> </span>%
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-10">
+                <img src="" alt="" id="icon" class="icon" />
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="row">
+              <div class="col-4" id="date"></div>
+              <div class="col-4">
+                <form id="search-form">
+                  <div class="form-group">
+                    <input
+                      id="search-city-input"
+                      type="search"
+                      class="form-control"
+                      placeholder="Enter your city"
+                      autocomplete="off"
+                      autofocus="on"
+                    />
+                  </div>
+                </form>
+              </div>
+              <div class="col-2">
+                <input
+                  type="submit"
+                  class="btn btn-primary shadow"
+                  value="search"
+                />
+              </div>
+              <div class="col-2">
+                <button
+                  id="search-current-location"
+                  type="button"
+                  class="btn btn-outline-primary w-100"
+                >
+                  My location
+                </button>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                Mon ↓10/↑21
+                <img src="images/rain.png" alt="..." />
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                Tue ↓10/↑21
+                <img src="images/rain.png" alt="..." />
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                Wed ↓10/↑21
+                <img src="images/rain.png" alt="..." />
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                Thu ↓10/↑21
+                <img src="images/rain.png" alt="..." />
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                Fri ↓10/↑21
+                <img src="images/rain.png" alt="..." />
+              </div>
+            </div>
           </div>
         </div>
+      </div>
+      <div class="gitHub">
+        <a
+          href="https://festive-goldberg-b863f1.netlify.app/"
+          target="blank"
+          class="link"
+          >Open-source code </a
+        >by Marina Taylor
       </div>
     </div>
     <script src="src/index.js"></script>
