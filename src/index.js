@@ -138,3 +138,31 @@ function defaultAdvice() {
   axios.get(Url).then(displayAdvice);
 }
 defaultAdvice();
+
+// display forecast
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = "";
+  let forecastDays = ["Thu", "Fri", "Sat", "Sun"];
+  forecastDays.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+    <div class="row">
+    <div class="col forecast-day">${day}</div>
+    <div class="col forecast-temperature">
+      <span class="forecast-temperature-min">10°</span>
+      |
+    <span class="forecast-temperature-max">21°</span>
+    </div>
+   <div class="col">
+    <img src="images/rain.png" alt="..." />
+    </div>
+    </div>
+  `;
+  });
+  forecastElement.innerHTML = forecastHTML;
+}
+
+displayForecast();
