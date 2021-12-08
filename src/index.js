@@ -24,6 +24,24 @@ let displayDate = document.querySelector("#date");
 
 date.innerHTML = formatDate(today);
 
+// Displaying and formatting the forecast days
+
+function formatForecastDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+
+  return days[day];
+}
+
 // Displaying weather and City
 
 function displayWeather(response) {
@@ -150,26 +168,35 @@ function getForecast(coordinates) {
 // display forecast
 
 function displayForecast(response) {
-  console.log(response.data.daily);
+  let forecastDaily = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = "";
-  let forecastDays = ["Thu", "Fri", "Sat", "Sun"];
-  forecastDays.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `
+
+  forecastDaily.forEach(function (forecastDay, index) {
+    if (index > 0 && index < 6) {
+      forecastHTML =
+        forecastHTML +
+        `
     <div class="row">
-    <div class="col forecast-day">${day}</div>
+    <div class="col forecast-day">${formatForecastDay(forecastDay.dt)}</div>
     <div class="col forecast-temperature">
-      <span class="forecast-temperature-min">10°</span>
+      <span class="forecast-temperature-min">${Math.round(
+        forecastDay.temp.min
+      )}°</span>
       |
-    <span class="forecast-temperature-max">21°</span>
+    <span class="forecast-temperature-max">${Math.round(
+      forecastDay.temp.max
+    )}°</span>
     </div>
    <div class="col">
-    <img src="images/.png" alt="..."  class="forecastIcon"/>
+    <img src="images/${forecastDay.weather[0].icon}.png" 
+      alt="" 
+      width="50px" 
+      class="forecastIcon"/>
     </div>
     </div>
   `;
+    }
   });
   forecastElement.innerHTML = forecastHTML;
 }

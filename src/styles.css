@@ -54,7 +54,7 @@ h3 {
 }
 
 .weather-app-wrapper {
-  padding: 150px 40px 40px;
+  padding: 150px 60px 60px;
 }
 
 .gitHub {
@@ -114,7 +114,7 @@ h3 {
 
 .forecast-temperature-min,
 .current-temperature-min {
-  opacity: 0.7;
+  opacity: 0.6;
 }
 
 .forecastIcon {
