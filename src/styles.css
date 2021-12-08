@@ -43,6 +43,7 @@ h3 {
 }
 .container.left-right:hover {
   background: hsla(349, 50%, 50%, 0.6);
+  border-radius: 0.25rem !important;
 }
 
 .col.right-inner-background {
@@ -55,7 +56,6 @@ h3 {
 
 .weather-app-wrapper {
   padding: 150px 60px 60px;
-  border-radius: 20px;
 }
 
 .gitHub {
