@@ -55,6 +55,7 @@ h3 {
 
 .weather-app-wrapper {
   padding: 150px 60px 60px;
+  border-radius: 20px;
 }
 
 .gitHub {
