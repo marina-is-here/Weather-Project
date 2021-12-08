@@ -45,7 +45,6 @@ function formatForecastDay(timestamp) {
 // Displaying weather and City
 
 function displayWeather(response) {
-  console.log(response);
   let currentTemp = document.querySelector("#degrees");
   currentTemp.innerHTML = Math.round(response.data.main.temp);
   let currentCity = document.querySelector("#city");
@@ -111,7 +110,6 @@ searchForCity("Melbourne");
 
 // get random advice button
 function displayAdvice(callback) {
-  console.log(callback);
   let newAdvice = document.querySelector("#advice");
   newAdvice.innerHTML = callback.data.slip.advice;
 }
@@ -136,7 +134,6 @@ defaultAdvice();
 function getForecast(coordinates) {
   let apiKey = "782ad18fe7bd9451c9bf2ed2a9967350";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
-  console.log(apiUrl);
   axios.get(apiUrl).then(displayForecast);
 }
 // display forecast
