@@ -49,6 +49,7 @@ function displayWeather(response) {
   );
   currentIcon.setAttribute("alt", response.data.weather[0].description);
   celsiusTemperature = response.data.main.temp;
+  getForecast(response.data.coord);
 }
 
 // Using the search input as the city input for weather
@@ -139,9 +140,17 @@ function defaultAdvice() {
 }
 defaultAdvice();
 
+// get weather for forecast
+function getForecast(coordinates) {
+  let apiKey = "782ad18fe7bd9451c9bf2ed2a9967350";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  console.log(apiUrl);
+  axios.get(apiUrl).then(displayForecast);
+}
 // display forecast
 
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = "";
   let forecastDays = ["Thu", "Fri", "Sat", "Sun"];
@@ -157,12 +166,10 @@ function displayForecast() {
     <span class="forecast-temperature-max">21°</span>
     </div>
    <div class="col">
-    <img src="images/rain.png" alt="..." />
+    <img src="images/.png" alt="..."  class="forecastIcon"/>
     </div>
     </div>
   `;
   });
   forecastElement.innerHTML = forecastHTML;
 }
-
-displayForecast();

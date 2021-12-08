@@ -1,7 +1,5 @@
-
-
 h1 {
-  font-family: 'Abril Fatface', cursive;
+  font-family: "Abril Fatface", cursive;
   font-size: 80px;
   transform: rotate(-11deg);
   position: relative;
@@ -26,20 +24,25 @@ h3 {
   background-size: cover;
   background-position: left;
   background-image: url(../images/right.jpg);
+  transition: all 2s ease;
+}
+
+.row.h-100:hover {
+  background-size: 700px;
 }
 
 .col-md-6.right-background {
   padding: 0;
-  background:#cdd5ee;
+  background: #cdd5ee;
 }
 
 .col.left-inner-background {
-  padding: 0px;
-  background: hsla(349,50%,50%,0.3);   
-  transition: background 0.7s;
+  padding: 0;
+  background: hsla(349, 50%, 50%, 0.3);
+  transition: all 2s ease-in;
 }
 .container.left-right:hover {
-  background: hsla(349,50%,50%,0.6)
+  background: hsla(349, 50%, 50%, 0.6);
 }
 
 .col.right-inner-background {
@@ -77,15 +80,6 @@ h3 {
 .advice {
   font-style: italic;
 }
-//.text-rotation {
-  transform: rotate(-20deg);
-  -webkit-transform: function;
-  -moz-transform: function;
-}
-
-
-
-
 
 .img {
   display: inline;
@@ -118,8 +112,11 @@ h3 {
   width: 100px;
 }
 
-.forecast-temperature-min, 
+.forecast-temperature-min,
 .current-temperature-min {
   opacity: 0.7;
 }
 
+.forecastIcon {
+  size: 20px;
+}
