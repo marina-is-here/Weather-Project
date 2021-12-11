@@ -124,7 +124,8 @@ form {
 }
 
 .form-control:valid {
-  background-color: #96d3ec !important;
+  background-color: hsla(348, 31%, 67%, 0.6) !important;
+  color: #000 !important;
 }
 
 .container .overview {
