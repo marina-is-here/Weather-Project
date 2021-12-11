@@ -114,15 +114,6 @@ function displayAdvice(callback) {
   newAdvice.innerHTML = callback.data.slip.advice;
 }
 
-function handleAdvice(event) {
-  event.preventDefault();
-  let Url = "https://api.adviceslip.com/advice";
-  axios.get(Url).then(displayAdvice);
-}
-
-let randomAdvice = document.querySelector("#random-button");
-randomAdvice.addEventListener("click", handleAdvice);
-
 // show advice when resfresh
 function defaultAdvice() {
   let Url = "https://api.adviceslip.com/advice";
@@ -148,7 +139,7 @@ function displayForecast(response) {
       forecastHTML =
         forecastHTML +
         `
-    <div class="row">
+    <div class="row textstyle">
     <div class="col forecast-day">${formatForecastDay(forecastDay.dt)}</div>
     <div class="col forecast-temperature">
       <span class="forecast-temperature-min">${Math.round(

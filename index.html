@@ -14,9 +14,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Quicksand:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" href="src/styles.css" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>Weather App</title>
@@ -38,24 +39,24 @@
               </div>
             </div>
 
-            <div class="row">
+            <div class="row textstyle">
               <div class="col-1">
                 <h2>
-                  <span id="degrees"></span>
+                  <span class="degrees" id="degrees"></span>
                 </h2>
               </div>
-              <div class="col-2 celsius">°C</div>
-              <div class="col-2 high-low">
+              <div class="col-1 celsius">°C</div>
+              <div class="col-9 high-low">
                 <span class="current-temperature-min" id="min"></span>° |
-                <span id="max"></span>°
+                <span class="current-temperature-max" id="max"></span>°
               </div>
             </div>
 
-            <div class="row">
-              <div class="col" id="description"></div>
+            <div class="row textstyle">
+              <div class="col description" id="description"></div>
             </div>
 
-            <div class="row">
+            <div class="row textstyle">
               <div class="col">
                 Wind:
                 <span id="wind"> </span>
@@ -63,7 +64,7 @@
               </div>
             </div>
 
-            <div class="row">
+            <div class="row textstyle">
               <div class="col">
                 Humidity:
                 <span id="humidity"> </span>%
@@ -79,7 +80,7 @@
 
           <div class="col right-inner-background rounded-2">
             <form id="search-form">
-              <div class="row">
+              <div class="row textstyle">
                 <div class="col-4">
                   <input
                     id="search-city-input"
@@ -109,21 +110,15 @@
                 </div>
               </div>
             </form>
+
             <div class="forecast" id="forecast"></div>
 
-            <div class="row">
+            <div class="row textstyle narrow">
               <div class="col">
                 In need of advice?
                 <span id="advice"></span>
               </div>
             </div>
-            <button
-              id="random-button"
-              type="button"
-              class="btn btn-outline-primary"
-            >
-              New Advice
-            </button>
           </div>
         </div>
       </div>

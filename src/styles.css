@@ -1,14 +1,18 @@
 h1 {
   font-family: "Abril Fatface", cursive;
-  font-size: 80px;
   transform: rotate(-11deg);
   position: relative;
   top: -40px;
   left: -32px;
 }
 
-h3 {
-  padding: 40px 0 0 0;
+.textstyle {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+}
+
+.narrow {
+  font-stretch: 20%;
 }
 
 .background-holder {
@@ -27,27 +31,23 @@ h3 {
   transition: all 2s ease;
 }
 
-.row.h-100:hover {
-  background-size: 700px;
-}
-
 .col-md-6.right-background {
   padding: 0;
   background: #cdd5ee;
 }
 
 .col.left-inner-background {
-  padding: 0;
+  padding: 20 0 0 0;
   background: hsla(349, 50%, 50%, 0.3);
   transition: all 2s ease-in;
 }
 .container.left-right:hover {
   background: hsla(349, 50%, 50%, 0.6);
-  border-radius: 0.25rem !important;
+  border-radius: 0.25rem;
 }
 
 .col.right-inner-background {
-  padding: 0;
+  padding: 0 0 20 0;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left;
@@ -64,6 +64,10 @@ h3 {
 .col-2.high-low {
   font-size: 15px;
   line-height: 40px;
+}
+
+.col.description {
+  text-transform: capitalize;
 }
 
 .a {
@@ -86,29 +90,6 @@ h3 {
   display: inline;
 }
 
-.active {
-  color: black;
-  cursor: default;
-  text-decoration: none;
-}
-
-.active:hover {
-  text-decoration: none;
-  color: black;
-}
-
-.fahrenheit-link {
-  text-decoration: none;
-}
-
-.celsius-link {
-  text-decoration: none;
-}
-
-.link {
-  text-decoration: none;
-}
-
 .icon {
   width: 100px;
 }
@@ -120,4 +101,16 @@ h3 {
 
 .forecastIcon {
   size: 20px;
+}
+
+.degrees {
+  font-size: 50px;
+}
+
+.celsius {
+  padding: 7px 0 0 10px;
+}
+
+.high-low {
+  padding: 7px;
 }
