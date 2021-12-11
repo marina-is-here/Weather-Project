@@ -73,7 +73,7 @@ function displayWeather(response) {
 
 function searchForCity(city) {
   //receiving the parameter, which will be added into the URL because of the equal name
-  let apiKey = "782ad18fe7bd9451c9bf2ed2a9967350";
+  let apiKey = "894d0829c275a172778a314da5fd80ae";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeather);
 }
@@ -140,8 +140,8 @@ function displayForecast(response) {
         forecastHTML +
         `
     <div class="row textstyle">
-    <div class="col forecast-day">${formatForecastDay(forecastDay.dt)}</div>
-    <div class="col forecast-temperature">
+    <div class="col-2 forecast-day">${formatForecastDay(forecastDay.dt)}</div>
+    <div class="col-2 forecast-temperature">
       <span class="forecast-temperature-min">${Math.round(
         forecastDay.temp.min
       )}°</span>
@@ -150,7 +150,7 @@ function displayForecast(response) {
       forecastDay.temp.max
     )}°</span>
     </div>
-   <div class="col">
+   <div class="col-2">
     <img src="images/${forecastDay.weather[0].icon}.png" 
       alt="" 
       width="50px" 

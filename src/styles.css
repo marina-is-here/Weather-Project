@@ -1,4 +1,5 @@
 h1 {
+  font-size: 75px;
   font-family: "Abril Fatface", cursive;
   transform: rotate(-11deg);
   position: relative;
@@ -6,8 +7,13 @@ h1 {
   left: -32px;
 }
 
+form {
+  padding: 20px 0 0 0;
+}
+
 .textstyle {
   font-family: "Quicksand", sans-serif;
+  font-size: 18px;
   font-weight: 400;
 }
 
@@ -47,7 +53,6 @@ h1 {
 }
 
 .col.right-inner-background {
-  padding: 0 0 20 0;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left;
@@ -104,13 +109,23 @@ h1 {
 }
 
 .degrees {
-  font-size: 50px;
+  font-size: 55px;
 }
 
 .celsius {
-  padding: 7px 0 0 10px;
+  font-size: 20px;
+  padding: 14px 0 0 5px;
 }
 
 .high-low {
-  padding: 7px;
+  font-weight: 500;
+  font-size: 20px;
+  padding: 14px 0 0 10px;
+}
+
+.container .overview {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  font-size: 23px;
+  padding: 0;
 }

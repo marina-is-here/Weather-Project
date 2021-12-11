@@ -40,34 +40,36 @@
             </div>
 
             <div class="row textstyle">
-              <div class="col-1">
-                <h2>
-                  <span class="degrees" id="degrees"></span>
-                </h2>
+              <div class="col-2">
+                <div class="d-flex float-start">
+                  <strong class="degrees" id="degrees"></strong>
+                  <span class="celsius">°C</span>
+                </div>
               </div>
-              <div class="col-1 celsius">°C</div>
-              <div class="col-9 high-low">
+              <span class="col-4 high-low">
                 <span class="current-temperature-min" id="min"></span>° |
                 <span class="current-temperature-max" id="max"></span>°
+              </span>
+            </div>
+
+            <div class="container overview">
+              <div class="row">
+                <div class="col description" id="description"></div>
               </div>
-            </div>
 
-            <div class="row textstyle">
-              <div class="col description" id="description"></div>
-            </div>
-
-            <div class="row textstyle">
-              <div class="col">
-                Wind:
-                <span id="wind"> </span>
-                m/s
+              <div class="row">
+                <div class="col">
+                  Wind:
+                  <span id="wind"> </span>
+                  m/s
+                </div>
               </div>
-            </div>
 
-            <div class="row textstyle">
-              <div class="col">
-                Humidity:
-                <span id="humidity"> </span>%
+              <div class="row">
+                <div class="col">
+                  Humidity:
+                  <span id="humidity"> </span>%
+                </div>
               </div>
             </div>
 
@@ -79,7 +81,7 @@
           </div>
 
           <div class="col right-inner-background rounded-2">
-            <form id="search-form">
+            <form id="search-form ">
               <div class="row textstyle">
                 <div class="col-4">
                   <input
@@ -98,7 +100,7 @@
                     value="search"
                   />
                 </div>
-                <div class="col-4" id="date"></div>
+
                 <div class="col-2">
                   <button
                     id="search-current-location"
@@ -108,6 +110,7 @@
                     My location
                   </button>
                 </div>
+                <div class="col-4" id="date"></div>
               </div>
             </form>
 
