@@ -24,7 +24,7 @@
   </head>
   <body>
     <div class="container-fluid h-100 background-holder">
-      <div class="row h-100">
+      <div class="row flex-nowrap h-100">
         <div class="col-md-6 left-background"></div>
         <div class="col-md-6 right-background"></div>
       </div>
@@ -83,34 +83,35 @@
           <div class="col right-inner-background rounded-2">
             <form id="search-form ">
               <div class="row textstyle">
-                <div class="col-4">
+                <div class="col-3">
                   <input
                     id="search-city-input"
                     type="search"
-                    class="form-control"
-                    placeholder="Enter your city"
+                    class="form-control outline-dark"
+                    placeholder="City"
                     autocomplete="off"
                     autofocus="on"
                   />
                 </div>
+
                 <div class="col-2">
                   <input
                     type="submit"
-                    class="btn btn-primary shadow"
+                    class="btn btn-outline-dark"
                     value="search"
                   />
                 </div>
 
-                <div class="col-2">
+                <div class="col-3">
                   <button
                     id="search-current-location"
                     type="button"
-                    class="btn btn-outline-primary w-100"
+                    class="btn btn-outline-dark text-nowrap"
                   >
                     My location
                   </button>
                 </div>
-                <div class="col-4" id="date"></div>
+                <div class="col text-nowrap" id="date"></div>
               </div>
             </form>
 

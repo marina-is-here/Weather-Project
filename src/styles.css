@@ -123,6 +123,10 @@ form {
   padding: 14px 0 0 10px;
 }
 
+.form-control:valid {
+  background-color: #96d3ec !important;
+}
+
 .container .overview {
   font-family: "Quicksand", sans-serif;
   font-weight: 500;
