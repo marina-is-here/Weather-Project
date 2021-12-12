@@ -93,6 +93,7 @@ a {
   position: relative;
   top: 82px;
   left: -15px;
+  opacity: 0.7;
 }
 
 .forecast-temperature-min,
@@ -142,7 +143,9 @@ a {
 .forecast {
   padding: 0 0 20px 0;
 }
-
+.forecastIcon {
+  opacity: 0.8;
+}
 .text-center {
   font-family: "Quicksand", sans-serif;
   font-size: 15px;
