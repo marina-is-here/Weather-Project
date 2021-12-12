@@ -136,9 +136,9 @@ function displayForecast(response) {
       forecastHTML =
         forecastHTML +
         `
-    <div class="row textstyle">
-    <div class="col-2 forecast-day">${formatForecastDay(forecastDay.dt)}</div>
-    <div class="col-2 forecast-temperature">
+    <div class="row d-flex align-items-center textstyle">
+    <div class="col-3 forecast-day">${formatForecastDay(forecastDay.dt)}</div>
+    <div class="col-2 text-nowrap forecast-temperature">
       <span class="forecast-temperature-min">${Math.round(
         forecastDay.temp.min
       )}°</span>
@@ -150,7 +150,7 @@ function displayForecast(response) {
    <div class="col-2">
     <img src="images/${forecastDay.weather[0].icon}.png" 
       alt="" 
-      width="50px" 
+      width="60px" 
       class="forecastIcon"/>
     </div>
     </div>

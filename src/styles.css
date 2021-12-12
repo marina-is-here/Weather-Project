@@ -3,18 +3,30 @@ h1 {
   font-family: "Abril Fatface", cursive;
   transform: rotate(-11deg);
   position: relative;
-  top: -40px;
+  top: -26px;
   left: -32px;
 }
 
 form {
-  padding: 20px 0 0 0;
+  padding: 20px 0 38px 0;
 }
 
+a {
+  text-decoration: none;
+  color: #000;
+  opacity: 0.6;
+}
 .textstyle {
   font-family: "Quicksand", sans-serif;
   font-size: 18px;
   font-weight: 400;
+}
+
+.row.textstyle {
+  padding: 0 0 0 24px;
+}
+.row.textstyle.narrow {
+  padding: 40px 0 20px 0;
 }
 
 .narrow {
@@ -47,9 +59,9 @@ form {
   background: hsla(349, 50%, 50%, 0.3);
   transition: all 2s ease-in;
 }
-.container.left-right:hover {
-  background: hsla(349, 50%, 50%, 0.6);
-  border-radius: 0.25rem;
+
+.container.left-right {
+  padding-bottom: 20px;
 }
 
 .col.right-inner-background {
@@ -60,12 +72,10 @@ form {
 }
 
 .weather-app-wrapper {
-  padding: 150px 60px 60px;
+  padding: 150px 100px 0px;
+  margin-bottom: 20px;
 }
 
-.gitHub {
-  padding: 30px;
-}
 .col-2.high-low {
   font-size: 15px;
   line-height: 40px;
@@ -75,28 +85,11 @@ form {
   text-transform: capitalize;
 }
 
-.a {
-  display: inline;
-}
-
-.btn.btn-primary {
-  display: inline;
-  color: #ff7143;
-}
-.meaning {
-  font-weight: bold;
-}
-
-.advice {
-  font-style: italic;
-}
-
-.img {
-  display: inline;
-}
-
 .icon {
-  width: 100px;
+  width: 50px;
+  position: relative;
+  top: 82px;
+  left: -15px;
 }
 
 .forecast-temperature-min,
@@ -109,7 +102,8 @@ form {
 }
 
 .degrees {
-  font-size: 55px;
+  font-size: 50px;
+  font-family: "Abril Fatface", cursive;
 }
 
 .celsius {
@@ -123,13 +117,31 @@ form {
   padding: 14px 0 0 10px;
 }
 
+.icon {
+  width: 100px;
+}
+
 .form-control:valid {
   background-color: hsla(348, 31%, 67%, 0.6) !important;
   color: #000 !important;
+  border-color: #000;
 }
 
 .container .overview {
   font-family: "Quicksand", sans-serif;
-  font-size: 20px;
-  padding: 0;
+  font-size: 19px;
+}
+
+.col-3.forecast-day {
+  font-family: "Abril Fatface", cursive;
+}
+
+.forecast {
+  padding: 0 0 20px 0;
+}
+
+.text-center {
+  font-family: "Quicksand", sans-serif;
+  font-size: 15px;
+  color: black;
 }

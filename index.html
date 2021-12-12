@@ -32,15 +32,18 @@
     <div class="weather-app-wrapper">
       <div class="container left-right">
         <div class="row">
-          <div class="col left-inner-background rounded-2">
+          <div class="col left-inner-background">
             <div class="row">
-              <div class="col">
+              <div class="col-7">
                 <h1 id="city"></h1>
+              </div>
+              <div class="col">
+                <img src="" alt="" id="icon" class="icon" />
               </div>
             </div>
 
             <div class="row textstyle">
-              <div class="col-2">
+              <div class="col-3">
                 <div class="d-flex float-start">
                   <strong class="degrees" id="degrees"></strong>
                   <span class="celsius">°C</span>
@@ -71,17 +74,18 @@
                   <span id="humidity"> </span>%
                 </div>
               </div>
-            </div>
 
-            <div class="row">
-              <div class="col">
-                <img src="" alt="" id="icon" class="icon" />
+              <div class="row textstyle narrow">
+                <div class="col">
+                  In need of advice?
+                  <div id="advice"></div>
+                </div>
               </div>
             </div>
           </div>
 
-          <div class="col right-inner-background rounded-2">
-            <form id="search-form ">
+          <div class="col right-inner-background">
+            <form id="search-form">
               <div class="row textstyle">
                 <div class="col-3">
                   <input
@@ -116,24 +120,23 @@
             </form>
 
             <div class="forecast" id="forecast"></div>
-
-            <div class="row textstyle narrow">
-              <div class="col">
-                In need of advice?
-                <span id="advice"></span>
-              </div>
-            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="position-absolute bottom-0 start-50 translate-middle">
-      <a
-        href="https://github.com/marina-is-here/Weather-Project"
-        target="blank"
-        class="link"
-        >Open-source code </a
-      >by Marina Taylor
+      <div class="text-center github">
+        <a
+          href="https://github.com/marina-is-here/Weather-Project"
+          target="blank"
+          class="link"
+          >Open-source code </a
+        >by Marina Taylor
+      </div>
+      <div class="text-center icons">
+        Icon by
+        <a href="https://www.flaticon.com/authors/oscar-estmont"
+          >Oscar EstMont</a
+        >
+      </div>
     </div>
     <script src="src/index.js"></script>
   </body>
