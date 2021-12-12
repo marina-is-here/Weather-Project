@@ -1,3 +1,6 @@
+body {
+  color: #292f37;
+}
 h1 {
   font-size: 75px;
   font-family: "Abril Fatface", cursive;
@@ -51,7 +54,7 @@ a {
 
 .col-md-6.right-background {
   padding: 0;
-  background: #cdd5ee;
+  background: hsl(332deg 32% 70%);
 }
 
 .col.left-inner-background {
