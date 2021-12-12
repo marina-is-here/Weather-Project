@@ -8,15 +8,12 @@ function formatDate(date) {
   if (minute < 10) {
     minute = `0${minute}`;
   }
-  let days = ["Sun", "Mon", "Tues", "Wed", "Thur", "Frid", "Sat"];
-  let day = days[date.getDay()];
-
   let months = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"];
   let month = months[date.getMonth()];
   let dateToday = date.getDate();
   let year = date.getFullYear();
   year = year.toString().substr(-2);
-  return `${day} ${dateToday}/${month}/${year} ${hour}:${minute}`;
+  return `${dateToday}/${month}/${year} ${hour}:${minute}`;
 }
 
 let today = new Date();
@@ -73,7 +70,7 @@ function displayWeather(response) {
 
 function searchForCity(city) {
   //receiving the parameter, which will be added into the URL because of the equal name
-  let apiKey = "894d0829c275a172778a314da5fd80ae";
+  let apiKey = "124272278a96bcddbf4006dadb388f0d";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeather);
 }
