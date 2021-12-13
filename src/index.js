@@ -87,10 +87,10 @@ cityForm.addEventListener("submit", handleSubmit);
 // get weather for current location
 
 function handlePosition(position) {
-  let apiKey = "782ad18fe7bd9451c9bf2ed2a9967350";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
-  let longitude = position.coords.longitude;
   let latitude = position.coords.latitude;
+  let longitude = position.coords.longitude;
+  let apiKey = "124272278a96bcddbf4006dadb388f0d";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeather);
 }
 
